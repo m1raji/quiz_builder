@@ -10,4 +10,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, '.'),
     },
   },
+  base: '/quiz_builder/'
 });
