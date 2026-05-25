@@ -38,6 +38,26 @@ interface TranslationSchema {
   errParseFailed: string;
   personalWebsite: string;
   exitGame: string;
+  tabJson: string;
+  tabCreator: string;
+  tabAiGuide: string;
+  aiGuideDesc: string;
+  aiGuidePromptLabel: string;
+  copyPrompt: string;
+  copied: string;
+  creatorAdd: string;
+  creatorUpdate: string;
+  creatorCancel: string;
+  creatorQuestion: string;
+  creatorOptions: string;
+  creatorTts: string;
+  creatorExplanation: string;
+  creatorNoQuestions: string;
+  creatorEdit: string;
+  creatorDelete: string;
+  creatorImportError: string;
+  creatorCorrectAnswer: string;
+  creatorOptionPlaceholder: (idx: number) => string;
 }
 
 const translations: Record<Language, TranslationSchema> = {
@@ -46,7 +66,7 @@ const translations: Record<Language, TranslationSchema> = {
     subtitle: "將 LLM 整理好的 JSON 貼在下方即可開始練習",
     jsonLabel: "題目 JSON",
     loadSample: "載入範例",
-    placeholder: `[\n  {\n    "question": "蘋果",\n    "options": ["りんご", "みかん", "いちご", "ぶどう"],\n    "answer": "りんご",\n    "ttsText": "りんご"\n  }\n]`,
+    placeholder: `[\n  {\n    "question": "蘋果",\n    "options": ["apple", "orange", "strawberry", "grape"],\n    "answer": "apple",\n    "ttsText": "apple"\n  }\n]`,
     timeLimit: "每題時間限制 (秒)",
     autoAdvance: "自動跳轉",
     autoAdvanceTrue: "答對後自動進入下一題",
@@ -65,7 +85,27 @@ const translations: Record<Language, TranslationSchema> = {
     errAnswerNotInOptions: (idx: number) => `第 ${idx} 個題目的 answer 必須在 options 中。`,
     errParseFailed: "JSON 解析失敗，請檢查格式。",
     personalWebsite: "個人網站",
-    exitGame: "返回主頁"
+    exitGame: "返回主頁",
+    tabJson: "JSON 貼上",
+    tabCreator: "手動編輯器",
+    tabAiGuide: "AI 產生指南",
+    aiGuideDesc: "推薦使用 ChatGPT 或 Claude 等 AI 工具來幫你生成題目！只需複製下方的提示詞，並貼給 AI，就能快速獲得符合格式的題目 JSON。",
+    aiGuidePromptLabel: "推薦 AI 提示詞",
+    copyPrompt: "複製提示詞",
+    copied: "已複製！",
+    creatorAdd: "新增題目",
+    creatorUpdate: "更新題目",
+    creatorCancel: "取消編輯",
+    creatorQuestion: "題目問題 (Question)",
+    creatorOptions: "選項 (Options) - 請勾選正確答案",
+    creatorTts: "語音朗讀文字 (ttsText) - 選填，預設同題目",
+    creatorExplanation: "題目詳解 (Explanation) - 選填",
+    creatorNoQuestions: "目前還沒有題目，請在下方新增，或載入範例！",
+    creatorEdit: "編輯",
+    creatorDelete: "刪除",
+    creatorImportError: "無法解析當前 JSON，請先修正 JSON 格式或清空後再使用編輯器。",
+    creatorCorrectAnswer: "正確答案",
+    creatorOptionPlaceholder: (idx: number) => `選項 ${idx}`
   },
   en: {
     title: "Universal Quiz Game",
@@ -91,7 +131,27 @@ const translations: Record<Language, TranslationSchema> = {
     errAnswerNotInOptions: (idx: number) => `Question ${idx} answer must be one of the options.`,
     errParseFailed: "JSON parsing failed, please check the format.",
     personalWebsite: "Personal Website",
-    exitGame: "Exit Game"
+    exitGame: "Exit Game",
+    tabJson: "Paste JSON",
+    tabCreator: "Manual Editor",
+    tabAiGuide: "AI Generator Guide",
+    aiGuideDesc: "We highly recommend using AI tools like ChatGPT or Claude to generate questions for you! Simply copy the prompt below and paste it to the AI to quickly get a perfectly formatted JSON.",
+    aiGuidePromptLabel: "Recommended AI Prompt",
+    copyPrompt: "Copy Prompt",
+    copied: "Copied!",
+    creatorAdd: "Add Question",
+    creatorUpdate: "Update Question",
+    creatorCancel: "Cancel Edit",
+    creatorQuestion: "Question Text",
+    creatorOptions: "Options - Please check the correct answer",
+    creatorTts: "TTS Text (ttsText) - Optional, defaults to question",
+    creatorExplanation: "Explanation - Optional",
+    creatorNoQuestions: "No questions yet. Add one below or load a sample!",
+    creatorEdit: "Edit",
+    creatorDelete: "Delete",
+    creatorImportError: "Failed to parse current JSON. Please fix the JSON format or clear it before using the editor.",
+    creatorCorrectAnswer: "Correct Answer",
+    creatorOptionPlaceholder: (idx: number) => `Option ${idx}`
   },
   ja: {
     title: "万能練習ゲーム",
@@ -117,7 +177,27 @@ const translations: Record<Language, TranslationSchema> = {
     errAnswerNotInOptions: (idx: number) => `第 ${idx} 問のanswerはoptionsに含まれている必要があります。`,
     errParseFailed: "JSONの解析に失敗しました。フォーマットを確認してください。",
     personalWebsite: "個人サイト",
-    exitGame: "ホームに戻る"
+    exitGame: "ホームに戻る",
+    tabJson: "JSON 貼り付け",
+    tabCreator: "手動エディタ",
+    tabAiGuide: "AI 生成ガイド",
+    aiGuideDesc: "ChatGPT や Claude などの AI ツールを使って問題を生成することをお勧めします！以下のプロンプトをコピーして AI に貼り付けるだけで、フォーマットに沿った問題の JSON を素早く取得できます。",
+    aiGuidePromptLabel: "推奨 AI プロンプト",
+    copyPrompt: "プロンプトをコピー",
+    copied: "コピーしました！",
+    creatorAdd: "問題を追加",
+    creatorUpdate: "問題を更新",
+    creatorCancel: "編集をキャンセル",
+    creatorQuestion: "問題文 (Question)",
+    creatorOptions: "選択肢 (Options) - 正解にチェックを入れてください",
+    creatorTts: "音声読み上げテキスト (ttsText) - 任意、デフォルトは問題文",
+    creatorExplanation: "解説 (Explanation) - 任意",
+    creatorNoQuestions: "まだ問題がありません。以下で追加するか、サンプルを読み込んでください！",
+    creatorEdit: "編集",
+    creatorDelete: "削除",
+    creatorImportError: "現在の JSON を解析できません。エディタを使用する前に、JSON のフォーマットを修正するか、クリアしてください。",
+    creatorCorrectAnswer: "正解",
+    creatorOptionPlaceholder: (idx: number) => `選択肢 ${idx}`
   }
 };
 
@@ -408,10 +488,15 @@ const getInitialLanguage = (): Language => {
   return 'en';
 };
 
+type TabType = 'json' | 'creator' | 'ai_guide';
+
 export default function App() {
   const [lang, setLang] = useState<Language>(getInitialLanguage);
   const [gameState, setGameState] = useState<GameState>('input');
-  const [jsonInput, setJsonInput] = useState('');
+  const [activeTab, setActiveTab] = useState<TabType>('json');
+  const [jsonInput, setJsonInput] = useState<string>(() => {
+    return localStorage.getItem('quiz_builder_json') || '';
+  });
   const [quizItems, setQuizItems] = useState<QuizItem[]>([]);
   const [itemStats, setItemStats] = useState<Record<number, number>>({});
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
@@ -423,7 +508,213 @@ export default function App() {
   const [autoAdvance, setAutoAdvance] = useState(true);
   const [isCorrectAnswer, setIsCorrectAnswer] = useState<boolean | null>(null);
 
+  // 產生器狀態
+  const [creatorItems, setCreatorItems] = useState<QuizItem[]>([]);
+  const [editingIndex, setEditingIndex] = useState<number | null>(null);
+  const [creatorQuestion, setCreatorQuestion] = useState('');
+  const [creatorOptions, setCreatorOptions] = useState<string[]>(['', '', '', '']);
+  const [creatorCorrectIdx, setCreatorCorrectIdx] = useState<number>(0);
+  const [creatorTts, setCreatorTts] = useState('');
+  const [creatorExplanation, setCreatorExplanation] = useState('');
+  const [copied, setCopied] = useState(false);
+
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // 當 jsonInput 改變時，同步到 localStorage
+  useEffect(() => {
+    localStorage.setItem('quiz_builder_json', jsonInput);
+  }, [jsonInput]);
+
+  // 當 jsonInput 改變時，嘗試同步到 creatorItems
+  useEffect(() => {
+    if (activeTab !== 'creator') {
+      try {
+        if (jsonInput.trim() === '') {
+          setCreatorItems([]);
+          return;
+        }
+        const parsed = JSON.parse(jsonInput);
+        if (Array.isArray(parsed)) {
+          // 簡單驗證格式，避免不合法的 JSON 導致編輯器崩潰
+          const validItems = parsed.filter(item => 
+            item && 
+            typeof item.question === 'string' && 
+            Array.isArray(item.options) && 
+            item.options.length === 4 && 
+            typeof item.answer === 'string'
+          );
+          setCreatorItems(validItems);
+        }
+      } catch (e) {
+        // 忽略解析錯誤，因為使用者可能正在輸入中
+      }
+    }
+  }, [jsonInput, activeTab]);
+
+  // 當 creatorItems 改變時，同步回 jsonInput
+  const syncCreatorToInput = (items: QuizItem[]) => {
+    if (items.length === 0) {
+      setJsonInput('');
+    } else {
+      setJsonInput(JSON.stringify(items, null, 2));
+    }
+  };
+
+  // 處理手動編輯器中的新增或更新
+  const handleSaveCreatorItem = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!creatorQuestion.trim()) return;
+    
+    // 確保選項都有填寫，若沒填寫則使用預設預留字
+    const finalOptions = creatorOptions.map((opt, idx) => opt.trim() || `Option ${idx + 1}`);
+    const correctAnswer = finalOptions[creatorCorrectIdx];
+
+    const newItem: QuizItem = {
+      question: creatorQuestion.trim(),
+      options: finalOptions,
+      answer: correctAnswer,
+    };
+
+    if (creatorTts.trim()) {
+      newItem.ttsText = creatorTts.trim();
+    }
+    if (creatorExplanation.trim()) {
+      newItem.explanation = creatorExplanation.trim();
+    }
+
+    let updatedItems = [...creatorItems];
+    if (editingIndex !== null) {
+      updatedItems[editingIndex] = newItem;
+      setEditingIndex(null);
+    } else {
+      updatedItems.push(newItem);
+    }
+
+    setCreatorItems(updatedItems);
+    syncCreatorToInput(updatedItems);
+
+    // 重設表單
+    setCreatorQuestion('');
+    setCreatorOptions(['', '', '', '']);
+    setCreatorCorrectIdx(0);
+    setCreatorTts('');
+    setCreatorExplanation('');
+  };
+
+  const handleEditCreatorItem = (index: number) => {
+    const item = creatorItems[index];
+    setCreatorQuestion(item.question);
+    setCreatorOptions([...item.options]);
+    
+    const correctIdx = item.options.indexOf(item.answer);
+    setCreatorCorrectIdx(correctIdx !== -1 ? correctIdx : 0);
+    
+    setCreatorTts(item.ttsText || '');
+    setCreatorExplanation(item.explanation || '');
+    setEditingIndex(index);
+  };
+
+  const handleDeleteCreatorItem = (index: number) => {
+    const updatedItems = creatorItems.filter((_, idx) => idx !== index);
+    setCreatorItems(updatedItems);
+    syncCreatorToInput(updatedItems);
+    if (editingIndex === index) {
+      setEditingIndex(null);
+      setCreatorQuestion('');
+      setCreatorOptions(['', '', '', '']);
+      setCreatorCorrectIdx(0);
+      setCreatorTts('');
+      setCreatorExplanation('');
+    } else if (editingIndex !== null && editingIndex > index) {
+      setEditingIndex(editingIndex - 1);
+    }
+  };
+
+  const handleCancelEdit = () => {
+    setEditingIndex(null);
+    setCreatorQuestion('');
+    setCreatorOptions(['', '', '', '']);
+    setCreatorCorrectIdx(0);
+    setCreatorTts('');
+    setCreatorExplanation('');
+  };
+
+  // 根據當前語言獲取 AI 提示詞
+  const getAiPrompt = () => {
+    if (lang === 'zh') {
+      return `請幫我生成一組測驗題目，格式必須是 JSON 陣列。
+每個題目必須包含以下欄位：
+1. "question": 題目的問題（字串）
+2. "options": 4 個選項的陣列（字串陣列，長度必須剛好為 4）
+3. "answer": 正確答案（字串，必須是 options 陣列中的其中一個元素）
+4. "ttsText": 語音朗讀文字（字串，選填，通常與 question 相同或為其發音）
+5. "explanation": 題目詳解（字串，選填，解釋為什麼這個答案是正確的）
+
+請直接輸出 JSON 陣列，不要包含任何 Markdown 標記（如 \`\`\`json）或額外的解釋文字。
+
+範例格式：
+[
+  {
+    "question": "下列哪一種排序演算法的平均時間複雜度為 O(n log n)？",
+    "options": ["泡沫排序 (Bubble Sort)", "插入排序 (Insertion Sort)", "快速排序 (Quick Sort)", "選擇排序 (Selection Sort)"],
+    "answer": "快速排序 (Quick Sort)",
+    "explanation": "Quick Sort 的平均時間複雜度為 O(n log n)，而 Bubble Sort、Insertion Sort、Selection Sort 的平均時間複雜度皆為 O(n²)。"
+  }
+]
+
+請幫我生成關於 [請在此輸入你的主題，例如：日檢N3文法、JavaScript基礎、世界地理] 的 10 個題目。`;
+    } else if (lang === 'ja') {
+      return `クイズの作成をお願いします。フォーマットは必ず JSON 配列にしてください。
+各オブジェクトは以下のフィールドを必ず含める必要があります：
+1. "question": 問題文（文字列）
+2. "options": 4つの選択肢（文字列の配列、要素数は必ず4つ）
+3. "answer": 正解（文字列、必ず options 配列のいずれかと一致させる）
+4. "ttsText": 音声読み上げテキスト（文字列、任意、通常は問題文と同じ、またはその読み仮名）
+5. "explanation": 問題の解説（文字列、任意、なぜその答えが正しいのかを説明する）
+
+Markdown の枠組み（\`\`\`json など）や余計な説明文は一切含めず、純粋な JSON 配列のみを出力してください。
+
+フォーマット例：
+[
+  {
+    "question": "次のうち、平均時間計算量が O(n log n) であるソートアルゴリズムはどれですか？",
+    "options": ["バブルソート (Bubble Sort)", "挿入ソート (Insertion Sort)", "クイックソート (Quick Sort)", "選択ソート (Selection Sort)"],
+    "answer": "クイックソート (Quick Sort)",
+    "explanation": "クイックソートの平均時間計算量は O(n log n) です。バブルソート、挿入ソート、選択ソートの平均時間計算量は O(n²) です。"
+  }
+]
+
+[ここにテーマを入力してください。例：TOEIC頻出文法、JavaScriptの基礎、世界地理] について、10問作成してください。`;
+    } else {
+      return `Please help me generate a set of quiz questions. The format must be a JSON array.
+Each question object must contain the following fields:
+1. "question": The question text (string)
+2. "options": An array of 4 options (array of strings, length must be exactly 4)
+3. "answer": The correct answer (string, must be one of the elements in the options array)
+4. "ttsText": Text-to-speech text (string, optional, usually same as question or its pronunciation)
+5. "explanation": Explanation of the question (string, optional, explaining why the answer is correct)
+
+Please output ONLY the raw JSON array. Do not include any Markdown formatting (like \`\`\`json) or extra conversational text.
+
+Example format:
+[
+  {
+    "question": "Which of the following sorting algorithms has an average time complexity of O(n log n)?",
+    "options": ["Bubble Sort", "Insertion Sort", "Quick Sort", "Selection Sort"],
+    "answer": "Quick Sort",
+    "explanation": "Quick Sort has an average time complexity of O(n log n), while Bubble Sort, Insertion Sort, and Selection Sort have an average time complexity of O(n²)."
+  }
+]
+
+Please generate 10 questions about [Enter your topic here, e.g., Japanese Kana, JavaScript Basics, World Geography].`;
+    }
+  };
+
+  const handleCopyPrompt = () => {
+    navigator.clipboard.writeText(getAiPrompt());
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
     localStorage.setItem('quiz_builder_lang', lang);
@@ -637,39 +928,258 @@ export default function App() {
             exit={{ opacity: 0, y: -20 }}
             className="w-full max-w-2xl bg-white rounded-3xl shadow-xl p-8"
           >
-            <div className="text-center mb-8">
+            <div className="text-center mb-6">
               <h1 className="text-3xl font-bold mb-2">{translations[lang].title}</h1>
               <p className="text-gray-600">{translations[lang].subtitle}</p>
             </div>
 
+            {/* 分頁切換 Tab */}
+            <div className="flex border-b border-gray-200 mb-6">
+              <button
+                onClick={() => setActiveTab('json')}
+                className={`flex-1 py-3 text-center font-bold text-sm border-b-2 transition-all ${
+                  activeTab === 'json'
+                    ? 'border-blue-600 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                {translations[lang].tabJson}
+              </button>
+              <button
+                onClick={() => setActiveTab('creator')}
+                className={`flex-1 py-3 text-center font-bold text-sm border-b-2 transition-all ${
+                  activeTab === 'creator'
+                    ? 'border-blue-600 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                {translations[lang].tabCreator}
+              </button>
+              <button
+                onClick={() => setActiveTab('ai_guide')}
+                className={`flex-1 py-3 text-center font-bold text-sm border-b-2 transition-all ${
+                  activeTab === 'ai_guide'
+                    ? 'border-blue-600 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                {translations[lang].tabAiGuide}
+              </button>
+            </div>
+
+            {/* 分頁內容 */}
             <div className="mb-6">
-              <div className="flex items-center justify-between mb-2">
-                <label className="block text-sm font-medium text-gray-700">
-                  {translations[lang].jsonLabel}
-                </label>
-                <button
-                  onClick={() => {
-                    if (lang === 'zh') setJsonInput(sampleJsonZh);
-                    else if (lang === 'en') setJsonInput(sampleJsonEn);
-                    else setJsonInput(sampleJsonJa);
-                  }}
-                  className="text-sm text-blue-600 hover:text-blue-800 flex items-center gap-1"
+              {activeTab === 'json' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  <FileJson size={16} />
-                  {translations[lang].loadSample}
-                </button>
-              </div>
-              <textarea
-                value={jsonInput}
-                onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setJsonInput(e.target.value)}
-                placeholder={translations[lang].placeholder}
-                className="w-full h-64 p-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-0 font-mono text-sm resize-none"
-              />
-              {error && (
-                <p className="mt-2 text-red-500 text-sm flex items-center gap-1">
-                  <XCircle size={16} />
-                  {error}
-                </p>
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="block text-sm font-medium text-gray-700">
+                      {translations[lang].jsonLabel}
+                    </label>
+                    <button
+                      onClick={() => {
+                        if (lang === 'zh') setJsonInput(sampleJsonZh);
+                        else if (lang === 'en') setJsonInput(sampleJsonEn);
+                        else setJsonInput(sampleJsonJa);
+                      }}
+                      className="text-sm text-blue-600 hover:text-blue-800 flex items-center gap-1"
+                    >
+                      <FileJson size={16} />
+                      {translations[lang].loadSample}
+                    </button>
+                  </div>
+                  <textarea
+                    value={jsonInput}
+                    onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setJsonInput(e.target.value)}
+                    placeholder={translations[lang].placeholder}
+                    className="w-full h-64 p-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-0 font-mono text-sm resize-none"
+                  />
+                  {error && (
+                    <p className="mt-2 text-red-500 text-sm flex items-center gap-1">
+                      <XCircle size={16} />
+                      {error}
+                    </p>
+                  )}
+                </motion.div>
+              )}
+
+              {activeTab === 'creator' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="space-y-6"
+                >
+                  {/* 題目列表 */}
+                  <div className="max-h-60 overflow-y-auto border border-gray-100 rounded-xl p-2 space-y-2 bg-gray-50">
+                    {creatorItems.length === 0 ? (
+                      <p className="text-center text-gray-400 text-sm py-8">
+                        {translations[lang].creatorNoQuestions}
+                      </p>
+                    ) : (
+                      creatorItems.map((item, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm border border-gray-100"
+                        >
+                          <div className="flex-1 min-w-0 pr-4">
+                            <p className="text-sm font-bold text-gray-800 truncate">
+                              {idx + 1}. {item.question}
+                            </p>
+                            <p className="text-xs text-gray-500 truncate mt-0.5">
+                              {translations[lang].creatorCorrectAnswer}: {item.answer}
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={() => handleEditCreatorItem(idx)}
+                              className="px-2.5 py-1 text-xs font-bold text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
+                            >
+                              {translations[lang].creatorEdit}
+                            </button>
+                            <button
+                              onClick={() => handleDeleteCreatorItem(idx)}
+                              className="px-2.5 py-1 text-xs font-bold text-red-600 hover:bg-red-50 rounded-md transition-colors"
+                            >
+                              {translations[lang].creatorDelete}
+                            </button>
+                          </div>
+                        </div>
+                      ))
+                    )}
+                  </div>
+
+                  {/* 編輯表單 */}
+                  <form onSubmit={handleSaveCreatorItem} className="p-5 border-2 border-gray-100 rounded-2xl space-y-4 bg-white">
+                    <div>
+                      <label className="block text-xs font-bold text-gray-700 mb-1">
+                        {translations[lang].creatorQuestion}
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={creatorQuestion}
+                        onChange={(e) => setCreatorQuestion(e.target.value)}
+                        placeholder="e.g. 蘋果的英文是什麼？"
+                        className="w-full p-2.5 border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-0"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-gray-700 mb-1.5">
+                        {translations[lang].creatorOptions}
+                      </label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {creatorOptions.map((opt, idx) => (
+                          <div key={idx} className="flex items-center gap-2 border border-gray-200 rounded-lg p-2 bg-gray-50">
+                            <input
+                              type="radio"
+                              name="correct_answer"
+                              checked={creatorCorrectIdx === idx}
+                              onChange={() => setCreatorCorrectIdx(idx)}
+                              className="w-4 h-4 text-blue-600 focus:ring-0 cursor-pointer"
+                            />
+                            <input
+                              type="text"
+                              value={opt}
+                              onChange={(e) => {
+                                const updated = [...creatorOptions];
+                                updated[idx] = e.target.value;
+                                setCreatorOptions(updated);
+                              }}
+                              placeholder={translations[lang].creatorOptionPlaceholder(idx + 1)}
+                              className="flex-1 bg-transparent border-none p-0 text-sm focus:ring-0"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-bold text-gray-700 mb-1">
+                          {translations[lang].creatorTts}
+                        </label>
+                        <input
+                          type="text"
+                          value={creatorTts}
+                          onChange={(e) => setCreatorTts(e.target.value)}
+                          placeholder="e.g. apple"
+                          className="w-full p-2.5 border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-0"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-bold text-gray-700 mb-1">
+                          {translations[lang].creatorExplanation}
+                        </label>
+                        <input
+                          type="text"
+                          value={creatorExplanation}
+                          onChange={(e) => setCreatorExplanation(e.target.value)}
+                          placeholder="e.g. 蘋果的英文是 apple，而 orange 是橘子。"
+                          className="w-full p-2.5 border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-0"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-end gap-2 pt-2">
+                      {editingIndex !== null && (
+                        <button
+                          type="button"
+                          onClick={handleCancelEdit}
+                          className="px-4 py-2 text-sm font-bold text-gray-500 hover:bg-gray-100 rounded-lg transition-colors"
+                        >
+                          {translations[lang].creatorCancel}
+                        </button>
+                      )}
+                      <button
+                        type="submit"
+                        className="px-5 py-2 text-sm font-bold bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        {editingIndex !== null ? translations[lang].creatorUpdate : translations[lang].creatorAdd}
+                      </button>
+                    </div>
+                  </form>
+                </motion.div>
+              )}
+
+              {activeTab === 'ai_guide' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="space-y-4"
+                >
+                  <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl">
+                    <p className="text-sm text-blue-800 leading-relaxed">
+                      {translations[lang].aiGuideDesc}
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-bold text-gray-700">
+                        {translations[lang].aiGuidePromptLabel}
+                      </span>
+                      <button
+                        onClick={handleCopyPrompt}
+                        className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all flex items-center gap-1 ${
+                          copied
+                            ? 'bg-green-600 text-white'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        }`}
+                      >
+                        {copied ? translations[lang].copied : translations[lang].copyPrompt}
+                      </button>
+                    </div>
+                    <pre className="w-full p-4 bg-gray-900 text-gray-100 rounded-xl text-xs font-mono overflow-x-auto whitespace-pre-wrap leading-relaxed max-h-80 overflow-y-auto">
+                      {getAiPrompt()}
+                    </pre>
+                  </div>
+                </motion.div>
               )}
             </div>
 
@@ -860,7 +1370,6 @@ export default function App() {
             <button
               onClick={() => {
                 setGameState('input');
-                setJsonInput('');
               }}
               className="w-full py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors"
             >
