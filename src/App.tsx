@@ -207,70 +207,70 @@ const sampleJsonZh = `[
     "options": ["こと", "もの", "ため", "わけ"],
     "answer": "こと",
     "ttsText": "かれはまいあさろくじにおきることにしている。",
-    "explanation": "「〜ことにしている」是固定句型，表示「（自己決定）習慣上都會做某事」，強調本人的意志與規律。例：毎日運動することにしている（習慣每天運動）。「ものにしている」不是正確用法；「ためにしている」語意不通；「わけにしている」亦非正確搭配。"
+    "explanation": "「〜ことにしている」是一個固定句型，意思是「養成了～的習慣」或「決定總是～」，強調說話者自己的意志與例行公事。例句：毎日運動することにしている（我養成每天運動的習慣）。「ものにしている」不是正確的表達方式；「ためにしている」在文法上不通順；「わけにしている」也不是正確的搭配詞。"
   },
   {
     "question": "この仕事は私＿＿できない。",
     "options": ["にしか", "だけが", "しかに", "のみに"],
     "answer": "にしか",
     "ttsText": "このしごとはわたしにしかできない。",
-    "explanation": "「〜にしか〜ない」表示「只有〜才能（否定其他可能性）」，用於助詞「に」的對象後接「しか」再接否定形，意思是「除了我以外無法做」。「だけが」雖有「只有」之意，但接法應為「私だけができる」（肯定句），此處句尾是「できない」否定形，不合。「しかに」「のみに」皆非正確日語用法。"
+    "explanation": "「〜にしか〜ない」的意思是「只有～能（做某事）」，否定了其他所有可能性。這裡的「しか」接在助詞「に」之後，並與否定詞「できない」連用，意思是「除了我之外沒人能做這件事」。雖然「だけが」也是「只有」的意思，但正確的用法應為肯定句的「私だけができる」；由於這個句子以否定詞「できない」結尾，所以不適用。「しかに」和「のみに」不是正確的日文表達方式。"
   },
   {
     "question": "雨が降って＿＿、試合は続けられた。",
     "options": ["いても", "あっても", "いたが", "いるのに"],
     "answer": "いても",
     "ttsText": "あめがふっていても、しあいはつづけられた。",
-    "explanation": "「〜ていても」表示「即使正在〜也…」，是逆接條件（讓步）的表達。「雨が降っていても」＝「即使雨在下」。「あっても」須接名詞或形容詞（例：雨であっても），接動詞「降って」語法不對。「いたが」是過去的逆接，語感上後句應出現轉折結果，但整句邏輯較弱。「いるのに」表示說話者對此感到不滿或意外，語氣不符合此句客觀描述的情境。"
+    "explanation": "「〜ていても」意思是「即使正在～」，表示讓步條件：「即使正在下雨，比賽還是繼續進行」。由於「あっても」必須接在名詞或形容詞之後（例如：雨であっても），接在動詞「降って」後面在文法上是錯誤的。「いたが」是過去式的對比，但在這句話中邏輯較不通順。「いるのに」帶有說話者不滿或驚訝的語氣，不適合這個句子客觀的語調。"
   },
   {
     "question": "彼女は歌手である＿＿、女優でもある。",
-    "options": ["とともに", "にしても", "からには", "ばかりか"],
+    "options": ["とともに", "にしても", "からには", "かわりに"],
     "answer": "とともに",
     "ttsText": "かのじょはかしゅであるとともに、じょゆうでもある。",
-    "explanation": "「〜とともに」有「同時也是〜」之意，用來並列兩種身份或狀態，表示「她既是歌手，同時也是女演員」。「にしても」表示「即使是〜」，帶有讓步語氣，不適合此處並列語意。「からには」表示「既然〜就應該…」，語意完全不同。「ばかりか」雖也有「不僅〜還…」之意，但語感上後句應表示更進一層、甚至超乎預期的事，且用「ばかりか」時後句常接「も」（女優でもある可接，語法上雖可，但「とともに」更自然地表達並列的雙重身份）。"
+    "explanation": "「〜とともに」意思是「與此同時～」或「同時也是～」，用來並列兩個角色或狀態：「她既是歌手，同時也是女演員」。「にしても」的意思是「即使～」。「からには」意思是「既然～」。「かわりに」意思是「代替～」。其他選項皆不符合。"
   },
   {
     "question": "試験に合格した＿＿、すぐに報告した。",
     "options": ["とたんに", "からには", "とたん", "ついでに"],
     "answer": "とたんに",
     "ttsText": "しけんにごうかくしたとたんに、すぐにほうこくした。",
-    "explanation": "「〜たとたんに」表示「就在〜的瞬間，立刻…」，強調前後動作幾乎同時發生。此句意為「考試一合格，馬上就去報告了」。「からには」表示「既然〜就…」，強調責任或決心，不符合此句的「瞬間性」語意。「とたん」（無「に」）雖偶爾可見，但標準用法是「とたんに」，選項中「とたん」單獨使用較不完整。「ついでに」表示「順便」，語意完全不同。"
+    "explanation": "「〜たとたんに」意思是「一～就立刻...」，強調兩個動作幾乎同時發生：「我一考及格就立刻報告了」。「からには」意思是「既然～」，強調責任或決心，不符合這裡瞬間發生的語感。雖然偶爾會看到省略「に」的「とたん」，但標準寫法是「とたんに」。「ついでに」的意思是「順便～」，意義完全不同。"
   },
   {
     "question": "彼はお酒を飲む＿＿、タバコも吸う。",
     "options": ["うえに", "ほかに", "ために", "ように"],
     "answer": "うえに",
     "ttsText": "かれはおさけをのむうえに、タバコもすう。",
-    "explanation": "「〜うえに」表示「在〜之上，還…」，用於累加負面（或同類）事項，有「不僅如此，還」之意。此句意為「他不只喝酒，還抽菸」，有疊加壞習慣之語感。「ほかに」意為「除此之外還有」，較為客觀中性，接法通常為「〜のほかに」，直接接動詞辭書形不自然。「ために」表示目的或原因，語意不符。「ように」表示目的或樣態，亦不符合此處語意。"
+    "explanation": "「〜うえに」意思是「加上～，還...」，用於添加另一個（通常是負面的）項目：「他不僅喝酒，還抽菸」，暗示不良習慣的累積。「ほかに」意思是「除此之外，還有～」，語氣較中立；通常以「〜のほかに」的形式出現，因此直接接在動詞辭書形之後是不自然的。「ために」表示目的或原因，不符合此處。「ように」表示目的或方式，同樣不適用。"
   },
   {
-    "question": "子供の＿＿、早く寝なさい。",
+    "question": "子供の＿＿、大人みたいな話し方をする。",
     "options": ["くせに", "ために", "わりに", "ほどに"],
     "answer": "くせに",
-    "ttsText": "こどものくせに、はやくねなさい。",
-    "explanation": "「〜くせに」表示「明明是〜，卻…」，帶有輕蔑、責備或諷刺的語氣。「子供のくせに（早く寝なさい）」意為「你明明是個小孩，（還不快去睡）」，語氣上有責備之意。「ために」表示目的或對象（為了小孩），語意不符。「わりに」表示「以〜來說，算是…」，用於對比期待與實際，語意不同。「ほどに」表示程度，不適合此句結構。"
+    "ttsText": "こどものくせに、おとなみたいなはなしかたをする。",
+    "explanation": "「〜くせに」的意思是「明明是～卻...」，帶有責備、批評或對矛盾感到驚訝的語氣。「子供のくせに」意思是「明明是個小孩（說話卻像個大人一樣）」。「ために」表示目的。「わりに」意思是「以～來說，相對地...」，但「くせに」專門用於批評或指出他人負面、令人驚訝的特徵。「ほどに」表示程度。"
   },
   {
     "question": "もっと練習すれば、うまく＿＿はずだ。",
-    "options": ["なれる", "なった", "なる", "なれた"],
+    "options": ["なれる", "なった", "なって", "なれた"],
     "answer": "なれる",
     "ttsText": "もっとれんしゅうすれば、うまくなれるはずだ。",
-    "explanation": "「〜ば〜はずだ」表示「如果〜的話，應該就能…」，是條件句加上推測，後句應用非過去式（現在／未來）。「なれる」是「なれる（能夠變成）」的可能形，表示「應該能夠變得擅長」，語意最為完整。「なった」是過去式，與假設未來的語境矛盾。「なる」雖是非過去式，但欠缺「可能」的語意（無法表達「能夠」之意）。「なれた」是可能形的過去式，與未來假設的語境不符。"
+    "explanation": "「〜ば〜はずだ」的意思是「如果～，應該就會...」。後半句應該使用非過去式。「なれる」是「なる」的可能形，意思是「應該能變得拿手」，非常符合句意。「なった」和「なれた」是過去式，與假設的未來語境矛盾。「なって」是て形，在文法上不能直接接續「はずだ」。"
   },
   {
     "question": "先生に＿＿、この本を読んでおいた。",
     "options": ["言われたので", "言うので", "言ったので", "言わせたので"],
     "answer": "言われたので",
     "ttsText": "せんせいにいわれたので、このほんをよんでおいた。",
-    "explanation": "「先生に言われた」是被動形，表示「被老師說（叫）了」，即「老師叫我（讀）」，後接「ので」表示原因，整句意為「因為老師叫我，所以我事先讀了這本書」。「言うので」是主動現在式，主語變成「先生が言う」，與助詞「に」的被動語境不符。「言ったので」是主動過去式，同樣主動語態，語法上「先生に言ったので」意為「因為（我）對老師說了」，語意錯誤。「言わせたので」是使役形，意為「讓老師說」，邏輯上不通。"
+    "explanation": "「先生に言われた」是被動形，意思是「被老師說」，也就是「老師叫我（讀它）」。結合表示原因的「ので」，這句話的意思是「因為老師叫我讀，所以我事先讀了這本書」。「言うので」是主動現在式，會讓「先生に」變成主動動詞的間接受詞，這與被動語境不符。「言ったので」是主動過去式；「先生に言ったので」會變成「因為我告訴了老師」，意思不對。「言わせたので」是使役形，意思是「讓老師說」，在此處邏輯不通。"
   },
   {
     "question": "彼が来る＿＿、準備しておこう。",
-    "options": ["前に", "ために", "ように", "までに"],
+    "options": ["までに", "ために", "ように", "うちに"],
     "answer": "までに",
     "ttsText": "かれがくるまでに、じゅんびしておこう。",
-    "explanation": "「〜までに」表示「在〜之前（的某個時間點以內完成）」，強調的是截止期限。「彼が来るまでに準備しておこう」意為「在他來之前，先做好準備吧」，強調完成準備的期限。「前に」雖也有「〜之前」的意思，「来る前に」語法正確，但「までに」更強調「在時限內完成」的概念，比「前に」更貼切此句想表達的事先準備語意（實際上「来る前に」語法也對，但N3〜N2考試中此情境通常考「までに」）。「ために」表示目的，「ように」表示目的或樣態，兩者語意皆不符。"
+    "explanation": "「〜までに」的意思是「在～之前」，強調在期限內（作為最後期限）完成：「在他來之前準備好吧」。「うちに」用於「在某個狀態持續的期間」，但不能以這種方式用於瞬間發生的事件。「ために」表示目的，而「ように」表示目的或方式；兩者皆不符合此處的句意。"
   }
 ]`;
 
@@ -298,10 +298,10 @@ const sampleJsonEn = `[
   },
   {
     "question": "彼女は歌手である＿＿、女優でもある。",
-    "options": ["とともに", "にしても", "からには", "ばかりか"],
+    "options": ["とともに", "にしても", "からには", "かわりに"],
     "answer": "とともに",
     "ttsText": "かのじょはかしゅであるとともに、じょゆうでもある。",
-    "explanation": "「〜とともに」means 'at the same time as ~' or 'as well as ~', used to list two roles or states in parallel: 'She is a singer and also an actress.' 「にしても」means 'even if ~' and carries a concessive nuance, unsuitable here. 「からには」means 'now that ~ / since ~', with a completely different meaning. 「ばかりか」means 'not only ~ but also ~', and while grammatically possible, it implies the second item is an even more surprising addition; 「とともに」more naturally expresses the parallel dual identity here."
+    "explanation": "「〜とともに」means 'at the same time as ~' or 'as well as ~', used to list two roles or states in parallel: 'She is a singer and also an actress.' 「にしても」means 'even if ~'. 「からには」means 'now that ~ / since ~'. 「かわりに」means 'instead of ~'. None of the other options fit."
   },
   {
     "question": "試験に合格した＿＿、すぐに報告した。",
@@ -318,18 +318,18 @@ const sampleJsonEn = `[
     "explanation": "「〜うえに」means 'on top of ~, also...' and is used to add another (often negative) item: 'Not only does he drink, he also smokes', implying an accumulation of bad habits. 「ほかに」means 'besides that, there is also ~' and is more neutral; it typically appears as 「〜のほかに」, so directly attaching it to a dictionary-form verb is unnatural. 「ために」expresses purpose or cause, which does not fit. 「ように」expresses purpose or manner, which also does not fit."
   },
   {
-    "question": "子供の＿＿、早く寝なさい。",
+    "question": "子供の＿＿、大人みたいな話し方をする。",
     "options": ["くせに", "ために", "わりに", "ほどに"],
     "answer": "くせに",
-    "ttsText": "こどものくせに、はやくねなさい。",
-    "explanation": "「〜くせに」means 'even though you are ~' and carries a tone of reproach, contempt, or sarcasm. 「子供のくせに（早く寝なさい）」means 'You're just a child, so hurry up and go to sleep', with a scolding nuance. 「ために」expresses purpose or a target beneficiary, which does not fit. 「わりに」means 'for a ~, comparatively...', used to contrast expectation with reality. 「ほどに」expresses degree and does not suit this sentence structure."
+    "ttsText": "こどものくせに、おとなみたいなはなしかたをする。",
+    "explanation": "「〜くせに」means 'even though you are ~' and carries a tone of reproach, criticism, or surprise at a contradiction. 「子供のくせに」means 'Even though he/she is a child (they speak like an adult)'. 「ために」expresses purpose. 「わりに」means 'for a ~, comparatively...', but 'くせに' is specifically used to criticize or point out a negative/surprising trait of someone else. 「ほどに」expresses degree."
   },
   {
     "question": "もっと練習すれば、うまく＿＿はずだ。",
-    "options": ["なれる", "なった", "なる", "なれた"],
+    "options": ["なれる", "なった", "なって", "なれた"],
     "answer": "なれる",
     "ttsText": "もっとれんしゅうすれば、うまくなれるはずだ。",
-    "explanation": "「〜ば〜はずだ」means 'if ~, then surely...', combining a conditional with a conjecture; the second clause should be in the non-past tense. 「なれる」is the potential form of 「なる」, meaning 'should be able to become good at it', which best conveys the intended meaning. 「なった」is past tense and contradicts the hypothetical future context. 「なる」is non-past but lacks the potential nuance of 'being able to'. 「なれた」is the past potential form, which also conflicts with the future hypothetical context."
+    "explanation": "「〜ば〜はずだ」means 'if ~, then surely...'. The second clause should be in the non-past tense. 「なれる」is the potential form of 「なる」, meaning 'should be able to become good at it', which fits perfectly. 「なった」and 「なれた」are past tense and contradict the hypothetical future context. 「なって」is the te-form and grammatically cannot connect directly to 「はずだ」."
   },
   {
     "question": "先生に＿＿、この本を読んでおいた。",
@@ -340,10 +340,10 @@ const sampleJsonEn = `[
   },
   {
     "question": "彼が来る＿＿、準備しておこう。",
-    "options": ["前に", "ために", "ように", "までに"],
+    "options": ["までに", "ために", "ように", "うちに"],
     "answer": "までに",
     "ttsText": "かれがくるまでに、じゅんびしておこう。",
-    "explanation": "「〜までに」means 'by the time ~' or 'before ~ (as a deadline)', emphasizing completion within a time limit. 「彼が来るまでに準備しておこう」means 'Let's have everything ready before he arrives', stressing the deadline. While 「来る前に」(before he comes) is also grammatically correct, 「までに」more precisely conveys the nuance of completing something within a set timeframe, which is the key point tested at the N3–N2 level. 「ために」expresses purpose, and 「ように」expresses purpose or manner; neither fits the meaning here."
+    "explanation": "「〜までに」means 'by the time ~' or 'before ~ (as a deadline)', emphasizing completion within a time limit. 'Let's have everything ready by the time he arrives'. 「うちに」is used for 'while a state continues', but cannot be used with instantaneous punctual events in this way. 「ために」expresses purpose, and 「ように」expresses purpose or manner; neither fits the meaning here."
   }
 ]`;
 
@@ -357,7 +357,7 @@ const sampleJsonJa = `[
   },
   {
     "question": "She suggested _____ the report before submitting it.",
-    "options": ["to proofread", "proofreading", "proofread", "proofread"],
+    "options": ["to proofread", "proofreading", "proofread", "proofreads"], 
     "answer": "proofreading",
     "ttsText": "She suggested proofreading the report before submitting it.",
     "explanation": "動詞 'suggest' の後には動名詞（V-ing形）が続き、不定詞は使えません。よって 'suggest proofreading' が正解です。動名詞を後に取る代表的な動詞には suggest、recommend、enjoy、avoid、consider、finish などがあります。"
@@ -504,7 +504,7 @@ export default function App() {
   const [timeLeft, setTimeLeft] = useState(10);
   const [error, setError] = useState('');
   const [showExplanation, setShowExplanation] = useState(false);
-  const [baseTimeLimit, setBaseTimeLimit] = useState(10);
+  const [baseTimeLimit, setBaseTimeLimit] = useState<number | "">(10);
   const [autoAdvance, setAutoAdvance] = useState(true);
   const [isCorrectAnswer, setIsCorrectAnswer] = useState<boolean | null>(null);
 
@@ -650,17 +650,19 @@ export default function App() {
 4. "ttsText": 語音朗讀文字（字串，選填，通常與 question 相同或為其發音）
 5. "explanation": 題目詳解（字串，選填，解釋為什麼這個答案是正確的）
 
-請直接輸出 JSON 陣列，不要包含任何 Markdown 標記（如 \`\`\`json）或額外的解釋文字。
+請將 JSON 陣列輸出在程式碼區塊中（使用 \`\`\`json ... \`\`\`），不要包含任何額外的解釋文字。
 
 範例格式：
+\`\`\`json
 [
   {
     "question": "下列哪一種排序演算法的平均時間複雜度為 O(n log n)？",
     "options": ["泡沫排序 (Bubble Sort)", "插入排序 (Insertion Sort)", "快速排序 (Quick Sort)", "選擇排序 (Selection Sort)"],
     "answer": "快速排序 (Quick Sort)",
-    "explanation": "Quick Sort 的平均時間複雜度為 O(n log n)，而 Bubble Sort、Insertion Sort、Selection Sort 的平均時間複雜度皆為 O(n²)。"
+    "explanation": "Quick Sort 的平均時間複雜度為 O(n log n)，而 Bubble Sort、Insertion Sort、Selection Sort 的平均時間複雜度皆為 O(n²)."
   }
 ]
+\`\`\`
 
 請幫我生成關於 [請在此輸入你的主題，例如：日檢N3文法、JavaScript基礎、世界地理] 的 10 個題目。`;
     } else if (lang === 'ja') {
@@ -672,9 +674,10 @@ export default function App() {
 4. "ttsText": 音声読み上げテキスト（文字列、任意、通常は問題文と同じ、またはその読み仮名）
 5. "explanation": 問題の解説（文字列、任意、なぜその答えが正しいのかを説明する）
 
-Markdown の枠組み（\`\`\`json など）や余計な説明文は一切含めず、純粋な JSON 配列のみを出力してください。
+JSON 配列をコードブロック（\`\`\`json ... \`\`\`）の中に出力し、余計な説明文は一切含めないでください。
 
 フォーマット例：
+\`\`\`json
 [
   {
     "question": "次のうち、平均時間計算量が O(n log n) であるソートアルゴリズムはどれですか？",
@@ -683,6 +686,7 @@ Markdown の枠組み（\`\`\`json など）や余計な説明文は一切含め
     "explanation": "クイックソートの平均時間計算量は O(n log n) です。バブルソート、挿入ソート、選択ソートの平均時間計算量は O(n²) です。"
   }
 ]
+\`\`\`
 
 [ここにテーマを入力してください。例：TOEIC頻出文法、JavaScriptの基礎、世界地理] について、10問作成してください。`;
     } else {
@@ -694,9 +698,10 @@ Each question object must contain the following fields:
 4. "ttsText": Text-to-speech text (string, optional, usually same as question or its pronunciation)
 5. "explanation": Explanation of the question (string, optional, explaining why the answer is correct)
 
-Please output ONLY the raw JSON array. Do not include any Markdown formatting (like \`\`\`json) or extra conversational text.
+Please output the JSON array inside a code block (using \`\`\`json ... \`\`\`), and do not include any extra conversational text.
 
 Example format:
+\`\`\`json
 [
   {
     "question": "Which of the following sorting algorithms has an average time complexity of O(n log n)?",
@@ -705,6 +710,7 @@ Example format:
     "explanation": "Quick Sort has an average time complexity of O(n log n), while Bubble Sort, Insertion Sort, and Selection Sort have an average time complexity of O(n²)."
   }
 ]
+\`\`\`
 
 Please generate 10 questions about [Enter your topic here, e.g., Japanese Kana, JavaScript Basics, World Geography].`;
     }
@@ -739,6 +745,13 @@ Please generate 10 questions about [Enter your topic here, e.g., Japanese Kana, 
 
   const startGame = () => {
     try {
+      // 安全防護：確保 baseTimeLimit 為有效數字
+      if (baseTimeLimit === "" || isNaN(baseTimeLimit) || baseTimeLimit < 1) {
+        setBaseTimeLimit(10);
+      } else if (baseTimeLimit > 300) {
+        setBaseTimeLimit(300);
+      }
+
       const parsedData = JSON.parse(jsonInput);
       if (!Array.isArray(parsedData) || parsedData.length === 0) {
         throw new Error(translations[lang].errInvalidJson);
@@ -811,12 +824,12 @@ Please generate 10 questions about [Enter your topic here, e.g., Japanese Kana, 
   useEffect(() => {
     if (gameState === 'playing' && currentIndex !== null) {
       const startTime = Date.now();
-      const timeLimit = baseTimeLimit + bonusTime;
-      setTimeLeft(timeLimit);
+      const limit = (typeof baseTimeLimit === 'number' ? baseTimeLimit : 10) + bonusTime;
+      setTimeLeft(limit);
 
       timerRef.current = setInterval(() => {
         const elapsed = (Date.now() - startTime) / 1000;
-        const remaining = Math.max(0, timeLimit - elapsed);
+        const remaining = Math.max(0, limit - elapsed);
         setTimeLeft(remaining);
 
         if (remaining === 0) {
@@ -852,8 +865,8 @@ Please generate 10 questions about [Enter your topic here, e.g., Japanese Kana, 
 
     const currentItem = quizItems[currentIndex];
     const isCorrect = selectedOption === currentItem.answer;
-    const timeLimit = baseTimeLimit + bonusTime;
-    const timeSpent = timeLimit - timeLeft;
+    const limit = (typeof baseTimeLimit === 'number' ? baseTimeLimit : 10) + bonusTime;
+    const timeSpent = limit - timeLeft;
 
     if (isCorrect) {
       setIsCorrectAnswer(true);
@@ -893,8 +906,8 @@ Please generate 10 questions about [Enter your topic here, e.g., Japanese Kana, 
   };
 
   const currentItem = currentIndex !== null ? quizItems[currentIndex] : null;
-  const timeLimit = baseTimeLimit + bonusTime;
-  const progress = (timeLeft / timeLimit) * 100;
+  const limit = (typeof baseTimeLimit === 'number' ? baseTimeLimit : 10) + bonusTime;
+  const progress = (timeLeft / limit) * 100;
 
   const totalRequired = quizItems.length * 2;
   const currentProgress = Object.values(itemStats).reduce((sum: number, val: any) => sum + Number(val), 0);
@@ -1194,7 +1207,24 @@ Please generate 10 questions about [Enter your topic here, e.g., Japanese Kana, 
                   min={1}
                   max={300}
                   value={baseTimeLimit}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setBaseTimeLimit(Math.max(1, parseInt(e.target.value) || 1))}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    const val = e.target.value;
+                    if (val === "") {
+                      setBaseTimeLimit("");
+                    } else {
+                      const parsed = parseInt(val);
+                      if (!isNaN(parsed)) {
+                        setBaseTimeLimit(parsed);
+                      }
+                    }
+                  }}
+                  onBlur={() => {
+                    if (baseTimeLimit === "" || baseTimeLimit < 1) {
+                      setBaseTimeLimit(1);
+                    } else if (baseTimeLimit > 300) {
+                      setBaseTimeLimit(300);
+                    }
+                  }}
                   className="w-full p-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-0 font-medium"
                 />
               </div>
